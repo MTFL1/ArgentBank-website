@@ -1,26 +1,29 @@
-
+import { Link } from "react-router-dom";
 
 function SignIn() {
     return (
-      <main className="main bg-dark"> {/* Utilisez className au lieu de class */}
-        <section className="sign-in-content"> {/* Utilisez className au lieu de class */}
+        <main className="main bg-dark">
+        <div className="sign-in-content">
           <i className="fa fa-user-circle sign-in-icon"></i>
           <h1>Sign In</h1>
           <form>
-            <div className="input-wrapper"> {/* Utilisez className au lieu de class */}
-              <label htmlFor="username">Username</label> {/* Utilisez htmlFor au lieu de for */}
+            <div className="input-wrapper">
+              <label htmlFor="username">Username</label>
               <input type="text" id="username" />
             </div>
-            <div className="input-wrapper"> {/* Utilisez className au lieu de class */}
-              <label htmlFor="password">Password</label> {/* Utilisez htmlFor au lieu de for */}
+            <div className="input-wrapper">
+              <label htmlFor="password">Password</label>
               <input type="password" id="password" />
             </div>
-            <div className="input-remember"> {/* Utilisez className au lieu de class */}
+            <div className="input-remember">
               <input type="checkbox" id="remember-me" />
-              <label htmlFor="remember-me">Remember me</label> {/* Utilisez htmlFor au lieu de for */}
+              <label htmlFor="remember-me">Remember me</label>
             </div>
+            <Link to="/User">
+            <button className="sign-in-button">Sign In</button> 
+            </Link>
           </form>
-        </section>
+        </div>
       </main>
     );
   }
