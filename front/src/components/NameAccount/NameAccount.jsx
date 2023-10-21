@@ -55,7 +55,7 @@ function NameAccount() {
         <i className="fas fa-user-circle"></i>
         <p>{username}</p>
       </Link>
-      <Link to="/" >
+      <Link to="/SignIn" >
         <button className='btn-user' onClick={handleLogout}>Logout</button>
         </Link>
       
