@@ -68,7 +68,6 @@ function SignIn() {
     return (
       <main className="main bg-dark">
       <section className="sign-in-content">
-         <i className="fa fa-user-circle sign-in-icon"></i>
 
          <form onSubmit={handleSignIn}>
             <div className="input-wrapper">
@@ -91,8 +90,6 @@ function SignIn() {
 
             <button className="sign-in__button" type="submit">Sign In</button>
          </form>
-
-         
 
       </section>
    </main>

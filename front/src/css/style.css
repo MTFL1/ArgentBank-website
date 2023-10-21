@@ -41,6 +41,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 5px 20px;
+
 }
 
 .main-nav a {
@@ -171,14 +172,26 @@ body {
   background-color: white;
   width: 300px;
   margin: 0 auto;
-  margin-top: 3rem;
   padding: 2rem;
 }
 
 .sign-in-icon {
   font-size: 5rem;
 }
-
+.no-underline {
+  text-decoration: none;
+}
+.user-style{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.hover{
+  border-bottom: 2px solid #00bc77;
+}
+.pdg-t-17{
+  padding-top: 17px;
+}
 .input-remember {
   display: flex;
 }
@@ -262,7 +275,6 @@ body {
 
 .header {
   color: #fff;
-  margin-bottom: 2rem;
 }
 
 .transaction-button {

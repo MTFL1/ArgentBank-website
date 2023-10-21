@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import React, { useEffect } from 'react';
+import 'font-awesome/css/font-awesome.min.css';
+
 
 function NameAccount() {
   const dispatch = useDispatch();
@@ -48,22 +50,26 @@ function NameAccount() {
   }, [dispatch, token]);
 
   return (
-    <div>
+    <div >
     {username ? (
-        <div className='userstyle'>
-      <Link to="/User">
-        <i className="fas fa-user-circle"></i>
-        <p>{username}</p>
+        <div className='user-style'>
+          <div>
+          <Link to="/User" className='no-underline user-style'>
+        <i className="fa fa-user-circle pdg-t-17"></i>
+        <p>&ensp;{username}&emsp;</p>
       </Link>
-      <Link to="/SignIn" >
-        <button className='btn-user' onClick={handleLogout}>Logout</button>
-        </Link>
+          </div>
       
+   <div>
+   <Link to="/SignIn" className='no-underline'>
+          <p onClick={handleLogout}>Sign Out</p>
+      </Link>
+   </div>
       </div>
     ) : (
-      <Link to="/SignIn">
-        <i className="fas fa-user-circle"></i>
-        <p>Sign In</p>
+      <Link to="/SignIn" className='no-underline user-style'>
+        <i className="fa fa-user-circle pdg-t-17"></i>
+        <p>&ensp;Sign In</p>
       </Link>
     )}
   </div>
