@@ -62,37 +62,36 @@ function SignIn() {
    // Si l'utilisateur est déjà connecté, on le redirige vers la page user
    useEffect(() => {
       if (token) {
-         navigate("/user");
+         navigate("/User");
       }
    }, [token, navigate]);
     return (
-      <main className="main bg-dark">
-      <section className="sign-in-content">
+<section>
+      <form className="sign-in-content" onSubmit={handleSignIn}>
+         <div className="input-wrapper">
+            <label htmlFor="username">Email</label>
+            <input className={error ? 'sign-in__error-border' : ''} type="email" id="username" value={username} onChange={handleUsernameChange} required/>
+         </div>
 
-         <form onSubmit={handleSignIn}>
-            <div className="input-wrapper">
-               <label htmlFor="username">Email</label>
-               <input className={error ? 'sign-in__error-border' : ''} type="email" id="username" value={username} onChange={handleUsernameChange} required/>
-            </div>
+         <div className="input-wrapper">
+            <label htmlFor="password">Password</label>
+            <input className={error ? 'sign-in__error-border' : ''} type="password" id="password" value={password} onChange={handlePasswordChange} required/>
+         </div>
 
-            <div className="input-wrapper">
-               <label htmlFor="password">Password</label>
-               <input className={error ? 'sign-in__error-border' : ''} type="password" id="password" value={password} onChange={handlePasswordChange} required/>
-            </div>
+         {error && <p className="sign-in__error-message">The username or password incorrect</p>}
 
-            {error && <p className="sign-in__error-message">The username or password incorrect</p>}
-
-            <div className="input-remember">
-               <input type="checkbox" id="remember-me" />
-               <label htmlFor="remember-me">Remember me</label>
-            </div>
+         <div className="input-remember">
+            <input type="checkbox" id="remember-me" />
+            <label htmlFor="remember-me">Remember me</label>
+         </div>
 
 
-            <button className="sign-in__button" type="submit">Sign In</button>
-         </form>
+         <button className="sign-in-button" type="submit">Sign In</button>
+      </form>
+</section>
 
-      </section>
-   </main>
+
+      
     );
   }
   

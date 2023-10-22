@@ -15,14 +15,12 @@ function App() {
     <>
     <Header/>
     <div className="contenair">
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/SignIn" element={<SignIn />} />
         <Route path="/User" element={<User />} />
         <Route path="*" element={<Error />} />
       </Routes>
-
     </div>
     <Footer />
 

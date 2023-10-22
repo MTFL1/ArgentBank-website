@@ -61,7 +61,7 @@ function NameAccount() {
           </div>
       
    <div>
-   <Link to="/SignIn" className='no-underline'>
+   <Link to="/" className='no-underline'>
           <p onClick={handleLogout}>Sign Out</p>
       </Link>
    </div>

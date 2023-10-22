@@ -1,0 +1,2 @@
+Image resizing and compression:
+242Ko before / 49Ko after

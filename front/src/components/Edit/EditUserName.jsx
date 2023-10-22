@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
  import { useSelector, useDispatch } from 'react-redux';
+ import { Link } from 'react-router-dom';
+ import 'font-awesome/css/font-awesome.min.css';
 
 
  function EditUserName() {
@@ -63,31 +65,40 @@ import React, { useState, useEffect } from 'react';
     }, [username]);
 
     return (
-       <>
+       <div className='background-account'>
           <section className="account-header">
              <h1>Welcome back, {firstname} {lastname} !</h1>
 
              {!showForm && (
-                <button className="transaction-button button" onClick={toggleForm}>Edit your name</button>
+                <button className="edit-button" onClick={toggleForm}>Edit name</button>
              )}
           </section>
-
           {showForm && (
-             <form className="account-form" onSubmit={handleSubmit}>
-                <label>First Name:</label>
+             <form className="account-edit-form" onSubmit={handleSubmit}>
+
+               <h2>Edit User info </h2>
+               <div className='input-edit'>
+               <label>First Name: &emsp;&emsp;&ensp;</label>
                 <input type="text" value={firstname} disabled/>
-
-                <label>Last Name:</label>
+               </div>
+           
+               <div className='input-edit'>
+                <label>Last Name: &emsp;&emsp;&ensp;</label>
                 <input type="text" value={lastname} disabled />
+                </div>
 
-                <label>New Username:</label>
+                <div className='input-edit'>
+                <label>New Username: &ensp;</label>
                 <input type="text" value={newUsername} onChange={handleInputChange} />
+               </div>
 
-                <button type="submit" className='transaction-button button'>Confirm</button>
-             </form>
-
+               <div className='row-confirm-cancel'>
+               <button type="submit" className='transaction-button'>Confirm </button>&emsp;&emsp;&emsp;
+               <Link  to="/SignIn"><button className="cancel-btn">Cancel</button></Link>
+               </div>
+            </form>
           )}
-       </>
+       </div>
     );
  }
 
