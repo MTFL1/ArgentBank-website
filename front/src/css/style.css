@@ -298,7 +298,6 @@ flex-grow: 1;
 .row-confirm-cancel{
   display: flex;
   flex-direction: row;
-
 }
 .header {
   color: #fff;

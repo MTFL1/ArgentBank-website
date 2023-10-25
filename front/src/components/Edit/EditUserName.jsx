@@ -78,6 +78,11 @@ import React, { useState, useEffect } from 'react';
 
                <h2>Edit User info </h2>
                <div className='input-edit'>
+                <label>New Username: &ensp;</label>
+                <input type="text" value={newUsername} onChange={handleInputChange}/>
+               </div>
+
+               <div className='input-edit'>
                <label>First Name: &emsp;&emsp;&ensp;</label>
                 <input type="text" value={firstname} disabled/>
                </div>
@@ -86,11 +91,6 @@ import React, { useState, useEffect } from 'react';
                 <label>Last Name: &emsp;&emsp;&ensp;</label>
                 <input type="text" value={lastname} disabled />
                 </div>
-
-                <div className='input-edit'>
-                <label>New Username: &ensp;</label>
-                <input type="text" value={newUsername} onChange={handleInputChange} />
-               </div>
 
                <div className='row-confirm-cancel'>
                <button type="submit" className='transaction-button'>Confirm </button>&emsp;&emsp;&emsp;
